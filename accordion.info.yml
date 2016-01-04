@@ -1,0 +1,8 @@
+name: CKEditor Accordion Button
+type: module
+description: This plugin adds details tag button.
+core: 8.x
+package: CKEditor
+version: VERSION
+dependencies:
+  - editor
