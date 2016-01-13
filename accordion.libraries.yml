@@ -1,0 +1,5 @@
+accordion:
+  version: VERSION
+  css:
+    theme:
+      css/accordion.css: {}
