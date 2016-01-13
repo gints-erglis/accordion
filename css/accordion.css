@@ -25,7 +25,7 @@ details summary .details-title {
 }
 
 details.collapse-processed summary::before {
-  background: transparent url(../menu-expanded.png) no-repeat scroll 0px 100%;
+  background: transparent url(menu-expanded.png) no-repeat scroll 0px 100%;
   content: "";
   float: left;
   height: 1em;
