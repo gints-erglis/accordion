@@ -6,6 +6,3 @@ package: CKEditor
 version: VERSION
 dependencies:
   - editor
-libraries:
-  - accordion/base
-  - core/drupal.collapse

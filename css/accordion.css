@@ -2,6 +2,7 @@ details {
   border: 1px solid #ddd;
   border-radius: 4px;
   margin: 0.5em 0;
+  display: block;
 }
 
 details summary {
@@ -12,9 +13,28 @@ details summary {
   border-radius: 4px;
   color: #3b3b3b;
   font-size: 1em;
+  display: block;
 }
 details summary::-webkit-details-marker {
   color: #3b3b3b;
+}
+
+details summary .details-title {
+  text-decoration: none;
+  color: #3b3b3b;
+}
+
+details.collapse-processed summary::before {
+  background: transparent url(../menu-expanded.png) no-repeat scroll 0px 100%;
+  content: "";
+  float: left;
+  height: 1em;
+  width: 1em;
+}
+
+details.collapse-processed:not([open]) summary::before {
+    background-position: 25% 35%;
+    transform: rotate(-90deg);
 }
 
 details .details-wrapper {
