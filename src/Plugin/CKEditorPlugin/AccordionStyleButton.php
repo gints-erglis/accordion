@@ -20,33 +20,33 @@ use Drupal\editor\Entity\Editor;
  *   label = @Translation("Accordion Style")
  * )
  */
-class accordionStyleButton extends PluginBase implements CKEditorPluginInterface, CKEditorPluginButtonsInterface {
+class AccordionStyleButton extends PluginBase implements CKEditorPluginInterface, CKEditorPluginButtonsInterface {
 
   /**
-   * Implements \Drupal\ckeditor\Plugin\CKEditorPluginInterface::getDependencies().
+   * {@inheritdoc}
    */
-  function getDependencies(Editor $editor) {
-    return array();
+  public function getDependencies(Editor $editor) {
+    return [];
   }
 
   /**
-   * Implements \Drupal\ckeditor\Plugin\CKEditorPluginInterface::getLibraries().
+   * {@inheritdoc}
    */
-  function getLibraries(Editor $editor) {
-    return array();
+  public function getLibraries(Editor $editor) {
+    return [];
   }
 
   /**
    * Implements \Drupal\ckeditor\Plugin\CKEditorPluginInterface::isInternal().
    */
-  function isInternal() {
+  public function isInternal() {
     return FALSE;
   }
 
   /**
    * Implements \Drupal\ckeditor\Plugin\CKEditorPluginInterface::getFile().
    */
-  function getFile() {
+  public function getFile() {
     return drupal_get_path('module', 'accordion') . '/js/plugins/accordionStyleButton/plugin.js';
   }
 
@@ -71,18 +71,19 @@ class accordionStyleButton extends PluginBase implements CKEditorPluginInterface
    */
   public function getButtons() {
     $path = drupal_get_path('module', 'accordion') . '/js/plugins/accordionStyleButton';
-    return array(
-      'applyAccordion' => array(
+    return [
+      'applyAccordion' => [
         'label' => \t('Apply Accordion'),
-        'image' => $path.'/accordion.png'
-      )
-    );
+        'image' => $path . '/icons/accordion.png'
+      ]
+    ];
   }
 
   /**
    * Implements \Drupal\ckeditor\Plugin\CKEditorPluginInterface::getConfig().
    */
   public function getConfig(Editor $editor) {
-    return array();
+    return [];
   }
+
 }

@@ -4,4 +4,3 @@ function accordion_page_attachments_alter(&$page) {
   $page['#attached']['library'][] = 'accordion/accordion';
   $page['#attached']['library'][] = 'core/drupal.collapse';
 }
-
