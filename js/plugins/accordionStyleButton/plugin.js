@@ -86,7 +86,7 @@
         editables: {
           content: {
             selector: 'div.details-content',
-            allowedContent: 'p br strong em a[href,target](*){*}'
+            allowedContent: 'blockquote details summary span img figure figcaption table sup sub iframe div u i s ul li ol p br strong em a[href,target](*){*}'
           }
         },
         template:
